@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link to="/dashboard" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-500 text-white font-bold text-sm">
             LP
           </div>
@@ -42,9 +42,17 @@ export default function Navbar() {
           })}
         </div>
 
-        <button className="flex items-center gap-2 rounded-lg border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-gray-50">
-          Sign Out
-        </button>
+        <div className="flex items-center gap-2">
+          <Link
+            to="/"
+            className="rounded-lg px-4 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-gray-100"
+          >
+            Home Site
+          </Link>
+          <button className="flex items-center gap-2 rounded-lg border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-gray-50">
+            Sign Out
+          </button>
+        </div>
       </div>
     </nav>
   );

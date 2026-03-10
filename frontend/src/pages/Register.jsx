@@ -19,12 +19,12 @@ export default function Register() {
       {/* Left — Branding Panel */}
       <div className="hidden w-1/2 flex-col justify-between bg-brand-500 p-12 lg:flex">
         <div>
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 text-white font-bold">
               LP
             </div>
             <span className="text-2xl font-bold text-white">LinkPost</span>
-          </div>
+          </Link>
         </div>
 
         <div className="space-y-6">
@@ -51,13 +51,23 @@ export default function Register() {
       {/* Right — Register Form */}
       <div className="flex w-full items-center justify-center px-6 lg:w-1/2">
         <div className="w-full max-w-md space-y-8">
+          <div className="flex justify-end">
+            <Link
+              to="/"
+              className="text-sm font-medium text-gray-500 transition hover:text-brand-500"
+            >
+              Back to Home
+            </Link>
+          </div>
           <div className="lg:hidden mb-8 flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-500 text-white font-bold text-sm">
-              LP
-            </div>
-            <span className="text-xl font-bold text-gray-900">
-              Link<span className="text-brand-500">Post</span>
-            </span>
+            <Link to="/" className="flex items-center gap-3">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-500 text-white font-bold text-sm">
+                LP
+              </div>
+              <span className="text-xl font-bold text-gray-900">
+                Link<span className="text-brand-500">Post</span>
+              </span>
+            </Link>
           </div>
 
           <div>
