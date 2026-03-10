@@ -39,6 +39,7 @@ src/
 │   ├── Layout.jsx          ← Navbar + <Outlet /> wrapper for protected pages
 │   └── Navbar.jsx          ← Sticky top nav with active link highlighting
 ├── pages/
+│   ├── Landing.jsx         ← Public marketing landing page with sections + CTA
 │   ├── Login.jsx           ← Split-screen login (email/password + LinkedIn OAuth)
 │   ├── Register.jsx        ← Split-screen register (name/email/password)
 │   ├── Dashboard.jsx       ← Stats cards, upcoming posts, quick actions
@@ -54,13 +55,14 @@ src/
 
 | Path         | Page       | Auth Required | Layout |
 | ------------ | ---------- | ------------- | ------ |
+| `/`          | Landing    | No            | None   |
 | `/login`     | Login      | No            | None   |
 | `/register`  | Register   | No            | None   |
 | `/dashboard` | Dashboard  | Yes           | Navbar |
 | `/connect`   | Connect    | Yes           | Navbar |
 | `/settings`  | Settings   | Yes           | Navbar |
 | `/profile`   | Profile    | Yes           | Navbar |
-| `*`          | → `/login` | —             | —      |
+| `*`          | → `/`      | —             | —      |
 
 ### Brand Colors (Tailwind `@theme`)
 
@@ -79,6 +81,7 @@ src/
 ### Status
 
 - [x] Tailwind CSS wired up (vite plugin + `@import "tailwindcss"`)
+- [x] Public landing page (`/`) with full marketing sections
 - [x] All pages created (static/hardcoded data)
 - [ ] Connect pages to backend API (Login, Register)
 - [ ] Auth context / token management
